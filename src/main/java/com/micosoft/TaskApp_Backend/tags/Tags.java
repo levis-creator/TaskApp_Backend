@@ -4,14 +4,17 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@Builder
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tags")
 public class Tags {
+
     @Id
     private String tagName;
     @NotBlank(message = "userId can't be blank")
@@ -19,4 +22,5 @@ public class Tags {
     @NotNull(message = "userId can't be null")
     @ManyToOne
     private String userId;
+    private  String colors;
 }
