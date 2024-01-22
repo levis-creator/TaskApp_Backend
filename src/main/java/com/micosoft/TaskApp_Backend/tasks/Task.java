@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Builder
@@ -21,11 +22,12 @@ public class Task {
     @Column(nullable = false)
     private Long taskId;
     private String taskTitle;
-    private String Description;
-    private List<Tags> tags;
+    private String tasKDescription;
+    private List<String> tags;
     @ManyToOne
     private String category;
     @ManyToOne
     private String userId;
-
+    private boolean complete=false;
+    private LocalDate dueDate;
 }
