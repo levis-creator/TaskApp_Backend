@@ -38,9 +38,9 @@ public class TagsService {
     }
 
     public String deleteTag(String id) {
-        boolean tagsDb= tagsRepository.existsById(id);
-        if (tagsDb){
-            userRepository.deleteById(id);
+        Optional<Tags> tagsDb= tagsRepository.findById(id);
+        if (tagsDb.isPresent()){
+            tagsRepository.deleteById(id);
             return "Deleted Successfully";
         }else {
             throw new IllegalStateException("Tag does not exists");
