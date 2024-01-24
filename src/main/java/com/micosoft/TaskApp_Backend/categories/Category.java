@@ -1,5 +1,6 @@
 package com.micosoft.TaskApp_Backend.categories;
 
+import com.micosoft.TaskApp_Backend.users.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +19,7 @@ public class Category {
     private String categoryName;
     private String categoryColor;
     @ManyToOne
-    private String userId;
+    @JoinColumn(name = "user_user_id")
+    private User user;
 
 }

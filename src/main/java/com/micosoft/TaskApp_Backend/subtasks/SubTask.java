@@ -1,5 +1,6 @@
 package com.micosoft.TaskApp_Backend.subtasks;
 
+import com.micosoft.TaskApp_Backend.tasks.Task;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,9 +18,11 @@ public class SubTask {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long subTaskId;
-    @ManyToOne
-    private Long taskId;
     private String subTaskName;
     private boolean completedSubTask=false;
+
+    @ManyToOne
+    @JoinColumn(name = "task_task_id")
+    private Task task;
 
 }

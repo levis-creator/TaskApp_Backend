@@ -1,6 +1,8 @@
 package com.micosoft.TaskApp_Backend.tasks;
 
+import com.micosoft.TaskApp_Backend.categories.Category;
 import com.micosoft.TaskApp_Backend.tags.Tags;
+import com.micosoft.TaskApp_Backend.users.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -24,10 +26,14 @@ public class Task {
     private String taskTitle;
     private String tasKDescription;
     private List<String> tags;
-    @ManyToOne
-    private String category;
-    @ManyToOne
-    private String userId;
-    private boolean complete=false;
     private LocalDate dueDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "category_item_id")
+    private Category categoryItem;
+
 }

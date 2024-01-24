@@ -66,11 +66,11 @@ public class TaskService {
         if (!task.getTags().isEmpty()&&!task.getTags().equals(taskDb.get().getTags())){
             taskDb.get().setTags(task.getTags());
         }
-//      category
-        if (!task.getCategory().isEmpty()
-                && !task.getCategory().equals(taskDb.get().getCategory())){
-            taskDb.get().setCategory(task.getCategory());
-        }
+////      category
+//        if (!task.getCategory().isEmpty()
+//                && !task.getCategory().equals(taskDb.get().getCategory())){
+//            taskDb.get().setCategory(task.getCategory());
+//        }
 //       Due date
         if (task.getDueDate() != null &&!task.getDueDate().equals(taskDb.get().getDueDate())){
             taskDb.get().setDueDate(task.getDueDate());

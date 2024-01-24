@@ -27,7 +27,7 @@ public class SubTaskService {
     }
 
     public SubTask creatingSubTask(SubTask subTask) {
-        Optional<SubTask> subTaskDb = subTaskRepository.findById(subTask.getTaskId());
+        Optional<SubTask> subTaskDb = subTaskRepository.findById(subTask.getSubTaskId());
         if (subTaskDb.isEmpty()) {
             return subTaskRepository.save(subTask);
         } else {

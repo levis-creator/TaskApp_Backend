@@ -1,5 +1,6 @@
 package com.micosoft.TaskApp_Backend.tags;
 
+import com.micosoft.TaskApp_Backend.users.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -18,10 +19,9 @@ public class Tags {
     @Id
     private Long tagId;
     private String tagName;
-    @NotBlank(message = "userId can't be blank")
-    @NotEmpty(message = "userId can't be empty")
-    @NotNull(message = "userId can't be null")
-    @ManyToOne
-    private String userId;
     private  String colors;
+    @ManyToOne
+    @JoinColumn(name = "user_user_id")
+    private User user;
+
 }
