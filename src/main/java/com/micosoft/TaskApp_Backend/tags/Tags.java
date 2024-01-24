@@ -16,6 +16,7 @@ import lombok.*;
 public class Tags {
 
     @Id
+    private Long tagId;
     private String tagName;
     @NotBlank(message = "userId can't be blank")
     @NotEmpty(message = "userId can't be empty")
