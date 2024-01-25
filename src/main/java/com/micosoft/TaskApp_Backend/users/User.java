@@ -16,11 +16,8 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "user")
+@Table(name = "task-user")
 public class User {
-    @NotEmpty(message = "user id cannot be empty")
-    @NotBlank(message = "user id cannot be blank")
-    @NotNull(message = "user id cannot be null")
     @Id
     @Column(nullable = false)
     private String userId;

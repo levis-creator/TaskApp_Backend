@@ -35,14 +35,14 @@ class TaskServiceTest {
     Task updateTask= task= Task.builder().taskId(1L)
             .taskTitle("Create something Else")
             .tags(newTagsList)
-            .category("Production")
+
             .tasKDescription("Some description else")
             .dueDate(LocalDate.of(2019, Month.FEBRUARY, 27))
-            .complete(false).build();
+           .build();
     @BeforeEach
     void setUp() {
         tag.addAll(tagsList);
-        task= Task.builder().taskId(1L).taskTitle("Create something").tags(tagsList).category("Work").tasKDescription("Some description").dueDate(LocalDate.of(2019, Month.FEBRUARY, 20)).complete(false).build();
+        task= Task.builder().taskId(1L).taskTitle("Create something").tags(tagsList).tasKDescription("Some description").dueDate(LocalDate.of(2019, Month.FEBRUARY, 20)).build();
     }
     @Test
     void gettingTaskList(){
@@ -96,7 +96,6 @@ class TaskServiceTest {
         Task result=taskService.updateTask(taskId, updateTask);
         assertAll(
                 ()->assertEquals(updateTask.getTaskTitle(),result.getTaskTitle()),
-                ()->assertEquals(updateTask.getCategory(), result.getCategory()),
                 ()->assertEquals(updateTask.getTasKDescription(),result.getTasKDescription()),
                 ()->assertEquals(updateTask.getTags(),result.getTags()),
                 ()->assertEquals(updateTask.getDueDate(),result.getDueDate())

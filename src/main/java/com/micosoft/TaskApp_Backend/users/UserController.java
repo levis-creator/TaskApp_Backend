@@ -10,6 +10,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/users")
 @AllArgsConstructor
+
 public class UserController {
     @Autowired
     private final UserService userService;

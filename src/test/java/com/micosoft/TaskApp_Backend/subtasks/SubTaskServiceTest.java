@@ -28,7 +28,7 @@ class SubTaskServiceTest {
 
     @BeforeEach
     void setUp() {
-        subTask = SubTask.builder().subTaskId(1L).subTaskName("Make Something").taskId(1L).completedSubTask(false).build();
+        subTask = SubTask.builder().subTaskId(1L).subTaskName("Make Something").completedSubTask(false).build();
     }
 
     @Test
