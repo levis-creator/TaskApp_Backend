@@ -1,0 +1,6 @@
+com/micosoft/taskapp_backend/tags/TagsServiceTest.class
+com/micosoft/taskapp_backend/users/UserServiceTest.class
+com/micosoft/taskapp_backend/TaskAppBackendApplicationTests.class
+com/micosoft/taskapp_backend/tasks/TaskServiceTest.class
+com/micosoft/taskapp_backend/categories/CategoryServiceTest.class
+com/micosoft/taskapp_backend/subtasks/SubTaskServiceTest.class
