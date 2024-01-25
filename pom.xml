@@ -9,12 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.micosoft</groupId>
-	<artifactId>TaskApp_Backend</artifactId>
+	<artifactId>taskapp_backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TaskApp_Backend</name>
+	<name>taskapp_backend</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>21</java.version>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
